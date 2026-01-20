@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vanguard SkyWatch</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <div>
+        <div class="brand">Vanguard <span>SkyWatch</span></div>
+        <div class="sub">Secure airspace monitoring dashboard (internal)</div>
+      </div>
+      <nav class="nav">
+        <a href="./admin.html">Admin</a>
+      </nav>
+    </header>
+
+    <main class="card">
+      <h1>Login</h1>
+
+      <div class="row">
+        <label>Email</label>
+        <input id="email" type="email" placeholder="admin@yourorg.com" autocomplete="username" />
+      </div>
+
+      <div class="row">
+        <label>Password</label>
+        <input id="password" type="password" placeholder="••••••••" autocomplete="current-password" />
+      </div>
+
+      <div class="actions">
+        <button id="loginBtn">Sign in</button>
+        <button id="logoutBtn" class="ghost" type="button">Logout</button>
+      </div>
+
+      <div id="status" class="status">Please login.</div>
+
+      <hr class="hr" />
+
+      <h2>Quick Test</h2>
+      <div class="actions">
+        <button id="meBtn" class="ghost" type="button">GET /api/me</button>
+        <button id="airBtn" class="ghost" type="button">GET /api/aircraft (sample bbox)</button>
+      </div>
+
+      <pre id="out" class="out">(output)</pre>
+    </main>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>

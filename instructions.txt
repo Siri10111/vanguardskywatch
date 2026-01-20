@@ -1,0 +1,41 @@
+Start the Backend (FastAPI)
+
+Open PowerShell (Terminal 1):
+
+cd C:\Users\lukep\vanguard-skywatch\backend
+.\.venv\Scripts\Activate.ps1
+uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
+
+
+Check it’s up:
+
+http://127.0.0.1:8000/health
+
+http://127.0.0.1:8000/docs
+
+Stop backend: Ctrl + C
+
+Start the Frontend (static server)
+
+Open another PowerShell (Terminal 2):
+
+cd C:\Users\lukep\vanguard-skywatch\frontend
+python -m http.server 5500
+
+
+Open:
+
+Main app: http://127.0.0.1:5500/index.html
+
+Admin: http://127.0.0.1:5500/admin.html
+
+Stop frontend: Ctrl + C
+
+If the venv activation errors (PowerShell policy)
+
+Run once (as Admin PowerShell):
+
+Set-ExecutionPolicy RemoteSigned
+
+
+Then try again.

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SkyWatch Admin</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <div>
+        <div class="brand">SkyWatch <span>Admin</span></div>
+        <div class="sub" id="whoami">Checking session…</div>
+      </div>
+      <nav class="nav">
+        <a href="./index.html">Dashboard</a>
+        <button id="logoutBtn" class="ghost" type="button">Logout</button>
+      </nav>
+    </header>
+
+    <main class="card">
+      <h1>Admin Panel</h1>
+      <p class="sub">This page requires an authenticated admin token.</p>
+
+      <div class="actions">
+        <button id="loadMeBtn" class="ghost" type="button">Reload /api/me</button>
+      </div>
+
+      <pre id="out" class="out">(output)</pre>
+    </main>
+  </div>
+
+  <script src="./admin.js"></script>
+</body>
+</html>
